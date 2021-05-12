@@ -1,0 +1,13 @@
+## 文件说明 ##
+
+# database_mysql.sql 是查询题测试数据，是mysql的文件
+# database_sqlserver.sql 也是查询题测试数据，是sql server的文件
+
+# 查询题答案里分为mysql的和sqlserver的
+
+# 事务和传染链的项目demo
+ppt观看顺序建议先事务再传染链
+database.zip里面有demo源码，也可以通过github下载https://github.com/nansanhao/database
+Demo的数据库目前是用的mysql版本，要用sqlserver自行切换即可
+
+# 综合题目希望通过xml内嵌sql语句的方式进行数据库的查询，希望大家将侧重点放在数据库的基础知识上。
