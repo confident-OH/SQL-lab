@@ -10,3 +10,14 @@
 -- 当前你处于SQL Server环境下！
 use covid19mon;
 
+IF (OBJECT_ID('OHTRIGGER') is not null)
+	DROP TRIGGER OHTRIGGER
+GO
+CREATE TRIGGER OHTRIGGER
+ON diagnose_record
+AFTER UPDATE,INSERT
+AS
+	UPDATE isolation_record 
+	SET state=3 
+	WHERE p_id IN (SELECT inserted.p_id from inserted where result=1);
+GO
